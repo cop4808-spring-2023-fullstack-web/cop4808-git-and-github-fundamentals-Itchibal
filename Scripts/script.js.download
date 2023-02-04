@@ -41,8 +41,11 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
+                updateDisplay();
+            } else if(buttons[i].classList.contains('pi'))  
+                inputPi();
                 updateDisplay();
         }
     )}
@@ -177,6 +180,10 @@ function operate(x, y, op) {
         return x / y;
         }
     }
+}
+
+function inputPi() {
+    return displayValue = 3.1415926;
 }
 
 function roundAccurately(num, places) {
