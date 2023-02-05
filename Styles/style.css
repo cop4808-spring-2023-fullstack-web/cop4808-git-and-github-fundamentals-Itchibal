@@ -110,5 +110,17 @@ button {
 }
 
 .pi {
-    background-color: orange;
+    background-color: lightgreen;
+}
+
+.sqrt {
+    background-color: lightgreen;
+}
+
+.expo {
+    background-color: lightgreen;
+}
+
+.fact {
+    background-color: lightgreen;
 }
