@@ -44,16 +44,16 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('pi'))  {
+            } else if(buttons[i].classList.contains('pi'))  {       //Added Detection for Pi Button
                 inputPi();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('fact'))  {
+            } else if(buttons[i].classList.contains('fact'))  {     //Added Detection for Factorial Button
                 inputFactorial(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('expo'))  {
+            } else if(buttons[i].classList.contains('expo'))  {     //Added Detection for Exponent Button
                 inputOperator(buttons[i].value);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sqrt'))  {
+            } else if(buttons[i].classList.contains('sqrt'))  {     //Added Detection for Square Root Button
                 inputSquareRoot(displayValue)
                 updateDisplay();
             }
@@ -181,7 +181,7 @@ function operate(x, y, op) {
         return x + y;
     } else if(op === '-') {
         return x - y;
-    } else if(op === '^') {
+    } else if(op === '^') {    // Added Exponent to the Operate Function as it was easier. TODO: MAke this a function
         return x ** y;
     } else if(op === '*') {
         return x * y;
@@ -193,11 +193,11 @@ function operate(x, y, op) {
         }
     }
 }
-
-function inputPi() {
+// Pi Function that just Creates the Pi Number into the DisplayValue
+function inputPi() {        
     return displayValue = 3.1415926;
 }
-
+// Factorial Function that takes in the current DisplayValue and runs a for loop to get the Factorial and returns it.
 function inputFactorial(number) {
     
     factorial = 1;
@@ -211,7 +211,7 @@ function inputFactorial(number) {
     }
     return displayValue = factorial;
 }
-
+// Square Root Function that takes in a number and preforms Math.sqrt on it and returns.
 function inputSquareRoot(number) {
     return displayValue = Math.sqrt(number);
 }
