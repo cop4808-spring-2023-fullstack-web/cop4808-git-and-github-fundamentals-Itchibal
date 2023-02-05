@@ -1,5 +1,5 @@
 Name: Adrian Echazabal(aechazabal2018@fau.edu) <br>
-Florida Atlantic Univercity
+Florida Atlantic University
 # My Full-Stack Homework Repo
 ## Homework 1 <br>
 Setup/Download Git and Github https://git-scm.com/download/win | https://desktop.github.com <br> 
