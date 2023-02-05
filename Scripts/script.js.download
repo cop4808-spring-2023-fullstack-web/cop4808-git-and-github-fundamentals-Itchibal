@@ -48,7 +48,7 @@ function clickButton() {
                 inputPi();
                 updateDisplay();
             } else if(buttons[i].classList.contains('fact'))  {
-                
+                inputFactorial(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('expo'))  {
                 inputOperator(buttons[i].value);
@@ -196,6 +196,20 @@ function operate(x, y, op) {
 
 function inputPi() {
     return displayValue = 3.1415926;
+}
+
+function inputFactorial(number) {
+    
+    factorial = 1;
+    if (number < 0){
+        return displayValue = 'Error';
+    }
+    else{
+        for (num = 2; num<=number; num++){
+            factorial = factorial * num
+        }
+    }
+    return displayValue = factorial;
 }
 
 function roundAccurately(num, places) {
