@@ -44,9 +44,19 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('pi'))  
+            } else if(buttons[i].classList.contains('pi'))  {
                 inputPi();
                 updateDisplay();
+            } else if(buttons[i].classList.contains('fact'))  {
+                
+                updateDisplay();
+            } else if(buttons[i].classList.contains('expo'))  {
+                inputOperator(buttons[i].value);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('sqrt'))  {
+                
+                updateDisplay();
+            }
         }
     )}
 }
@@ -171,6 +181,8 @@ function operate(x, y, op) {
         return x + y;
     } else if(op === '-') {
         return x - y;
+    } else if(op === '^') {
+        return x ** y;
     } else if(op === '*') {
         return x * y;
     } else if(op === '/') {
