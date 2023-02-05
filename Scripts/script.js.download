@@ -54,7 +54,7 @@ function clickButton() {
                 inputOperator(buttons[i].value);
                 updateDisplay();
             } else if(buttons[i].classList.contains('sqrt'))  {
-                
+                inputSquareRoot(displayValue)
                 updateDisplay();
             }
         }
@@ -210,6 +210,10 @@ function inputFactorial(number) {
         }
     }
     return displayValue = factorial;
+}
+
+function inputSquareRoot(number) {
+    return displayValue = Math.sqrt(number);
 }
 
 function roundAccurately(num, places) {
