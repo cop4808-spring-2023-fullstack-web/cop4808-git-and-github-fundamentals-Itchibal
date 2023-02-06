@@ -110,7 +110,7 @@ button {
 }
 
 .pi {
-    background-color: lightgreen;
+    background-color: lightgreen;  /* Added New Color for Things that need their own functions*/
 }
 
 .fact {
@@ -118,5 +118,9 @@ button {
 }
 
 .sqrt {
+    background-color: lightgreen;
+}
+
+.expo {
     background-color: lightgreen;
 }
