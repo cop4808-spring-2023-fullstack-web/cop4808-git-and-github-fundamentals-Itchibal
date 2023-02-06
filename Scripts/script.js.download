@@ -51,8 +51,7 @@ function clickButton() {
                 inputFactorial(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('expo'))  {     //Added Detection for Exponent Button
-                inputExponent(displayValue,i);
-                updateDisplay();
+                inputExponent(buttons[i].value);
             } else if(buttons[i].classList.contains('sqrt'))  {     //Added Detection for Square Root Button
                 inputSquareRoot(displayValue)
                 updateDisplay();
@@ -209,16 +208,36 @@ function inputFactorial(number) {
             factorial = factorial * num
         }
     }
-    return displayValue = factorial;
+    return displayValue = parseFloat(factorial).toFixed(9);
 }
 // Square Root Function that takes in a number and preforms Math.sqrt on it and returns.
 function inputSquareRoot(number) {
-    return displayValue = Math.sqrt(number);
+    return displayValue = Math.sqrt(number).toFixed(9);
 }
 
 // Exponent Function that uses operator function to return the answer.
-function inputExponent(number,i) {
-    return inputOperator(buttons[i].value);
+function inputExponent(operator) {
+    if(firstOperator != null && secondOperator === null) {
+        //4th click - handles input of second operator
+        secondOperator = operator;
+        secondOperand = displayValue;
+        result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
+        displayValue = roundAccurately(result, 15).toString();
+        firstOperand = displayValue;
+        result = null;
+    } else if(firstOperator != null && secondOperator != null) {
+        //6th click - new secondOperator
+        secondOperand = displayValue;
+        result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
+        secondOperator = operator;
+        displayValue = roundAccurately(result, 15).toString();
+        firstOperand = displayValue;
+        result = null;
+    } else { 
+        //2nd click - handles first operator input
+        firstOperator = operator;
+        firstOperand = displayValue;
+    }
 }
 
 function roundAccurately(num, places) {

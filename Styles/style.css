@@ -110,17 +110,21 @@ button {
 }
 
 .pi {
+    font-weight: bold;
     background-color: lightgreen;  /* Added New Color for Things that need their own functions*/
 }
 
 .fact {
+    font-weight: bold;
     background-color: lightgreen;
 }
 
 .sqrt {
+    font-weight: bold;
     background-color: lightgreen;
 }
 
 .expo {
+    font-weight: bold;
     background-color: lightgreen;
 }
